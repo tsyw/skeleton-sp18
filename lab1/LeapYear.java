@@ -13,7 +13,7 @@ public class LeapYear {
          *  @param year
          */
         
-        return !(year % 400) || (!(year % 4) && (year % 100))
+        return (0 == year % 400) || (0 == (year % 4) && (year % 100 != 0));
 
     }
 
