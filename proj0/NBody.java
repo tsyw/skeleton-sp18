@@ -18,7 +18,7 @@ public class NBody {
             double xV = input.readDouble();
             double yV = input.readDouble();
             double mass = input.readDouble();
-            String name = "./images/" + input.readString();
+            String name = input.readString();
             plist[i] = new Planet(xP, yP, xV, yV, mass, name);
         }
         return plist;
