@@ -24,7 +24,7 @@ public class NBody {
         return plist;
     }
 
-    public static void drawBack(double universe, String back) {
+    private static void drawBack(double universe, String back) {
         StdDraw.setScale(-universe, universe);
         StdDraw.clear();
         StdDraw.picture(0, 0, back);
@@ -32,7 +32,7 @@ public class NBody {
         //StdDraw.pause(2000);
     }
 
-    public static void runSim(double T, double dt, Planet[] plist, double universe) {
+    private static void runSim(double T, double dt, Planet[] plist, double universe) {
         for(double time = 0; time != T; time += dt) {
             double[] xForces = new double[plist.length];
             double[] yForces = new double[plist.length];
