@@ -53,12 +53,19 @@ public class IntList {
         if (A == null) {
             return null;
         }
-        IntList reversed = null;
-        while (A != null) {
-            reversed = new IntList(A.first, reversed);
-            A = A.rest;
+        IntList tempP = null;
+        IntList p = A;
+        while (p != null) {
+            tempP = new IntList(p.first, tempP);
+            p = p.rest;
         }
-        return reversed;
+        p = A;
+        while (p != null) {
+            p.first = tempP.first;
+            tempP = tempP.rest;
+            p = p.rest;
+        }
+        return A;
     }
 
 

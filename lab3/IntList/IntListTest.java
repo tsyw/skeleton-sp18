@@ -18,11 +18,11 @@ public class IntListTest {
         assertNull(IntList.reverse(nullList));
 
         //none-null situation
-        IntList list1 =IntList.of(1, 2, 3, 4, 5);
+        IntList list1 =IntList.of(1, 2, 3, 4);
         IntList list1r = IntList.reverse(list1);
-        IntList list1exp = IntList.of(5, 4, 3, 2, 1);
+        IntList list1exp = IntList.of(4, 3, 2, 1);
         assertEquals(list1exp, list1r);
-        assertNotSame(list1r, list1);
+        assertSame(list1r, list1);
 
     }
 
