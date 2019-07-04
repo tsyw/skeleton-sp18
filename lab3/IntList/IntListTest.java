@@ -11,6 +11,22 @@ public class IntListTest {
      */
 
     @Test
+    public void testReverse() {
+
+        // null situation
+        IntList nullList = null;
+        assertNull(IntList.reverse(nullList));
+
+        //none-null situation
+        IntList list1 =IntList.of(1, 2, 3, 4, 5);
+        IntList list1r = IntList.reverse(list1);
+        IntList list1exp = IntList.of(5, 4, 3, 2, 1);
+        assertEquals(list1exp, list1r);
+        assertNotSame(list1r, list1);
+
+    }
+
+    @Test
     public void testList() {
         IntList one = new IntList(1, null);
         IntList twoOne = new IntList(2, one);
